@@ -1,0 +1,7 @@
+{
+  "name": "CyberShield AI",
+  "description": "AI-Powered Screenshot Security & Privacy Guardian for translating security warnings and protecting sensitive screenshot information.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
