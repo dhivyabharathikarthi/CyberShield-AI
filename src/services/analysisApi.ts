@@ -17,7 +17,7 @@ export async function analyzeScreenshotImage(
   filename?: string
 ): Promise<AnalysisReport> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 60000); // 60s timeout
+  const timeoutId = setTimeout(() => controller.abort(), 120000); // 120s timeout
 
   try {
     const response = await fetch('/api/analyze-screenshot', {
