@@ -193,18 +193,14 @@ app.post('/api/analyze-screenshot', async (req: Request, res: Response): Promise
     // Try multiple supported models with retry backoff for 503 high demand handling
     const candidateModels = [
       'gemini-2.5-flash',
-      'gemini-flash-latest',
-      'gemini-2.5-pro',
-      'gemini-3.1-flash-lite',
-      'gemini-3.1-pro-preview'
-    ];
+      ];
 
     let response: any = null;
     let lastError: any = null;
 
     for (const modelName of candidateModels) {
       // Try up to 2 attempts per model with a small delay for 503 recovery
-      for (let attempt = 0; attempt < 2; attempt++) {
+      for (let attempt = 0; attempt < 1; attempt++) {
         try {
           if (attempt > 0) {
             await new Promise((resolve) => setTimeout(resolve, 800));
