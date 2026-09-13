@@ -192,7 +192,7 @@ app.post('/api/analyze-screenshot', async (req: Request, res: Response): Promise
 
     // Try multiple supported models with retry backoff for 503 high demand handling
     const candidateModels = [
-      'gemini-2.5-flash',
+      'gemini-3.6-flash',
       ];
 
     let response: any = null;
